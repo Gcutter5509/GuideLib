@@ -21,11 +21,15 @@ body {
         radial-gradient(ellipse at 50% 0%, rgba(116, 82, 18, .24), transparent 52%),
         repeating-linear-gradient(0deg, rgba(214,170,66,.018) 0 1px, transparent 1px 3px),
         linear-gradient(180deg, #171207, #080704 76%);
+    background-attachment: fixed;
 }
 
 .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     padding: 18px 24px;
-    background: linear-gradient(#79602a, #493715 48%, #2a210e);
+    background: #493715;
     border-top: 2px solid #9a7a39;
     border-bottom: 3px solid #090704;
     box-shadow: 0 5px 0 rgba(139, 101, 25, .45), 0 12px 30px rgba(0, 0, 0, .65);

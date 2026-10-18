@@ -93,8 +93,8 @@ h2 {
 .section-description { margin: 10px 0 0; color: var(--muted); font-weight: 700; }
 
 .contact-note { margin: 8px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
-.contact-note a { color: #382808; text-decoration: underline; text-underline-offset: 3px; }
-.contact-note a:hover { color: #211704; }
+.contact-note a { color: #fff0bb; text-decoration: underline; text-underline-offset: 3px; text-shadow: 0 1px #493715; }
+.contact-note a:hover { color: #fff8da; }
 .contact-note a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 
 .guide-grid {

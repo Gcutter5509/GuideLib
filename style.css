@@ -1,9 +1,9 @@
 :root {
     color-scheme: dark;
     --gold: #775711;
-    --gold-light: #382808;
+    --gold-light: #2a1d07;
     --ink: #2b210d;
-    --muted: #49391a;
+    --muted: #382808;
 }
 
 * { box-sizing: border-box; }
@@ -64,7 +64,7 @@ main { padding: 42px 24px 72px; }
     width: min(1320px, 100%);
     margin: 0 auto;
     padding: clamp(20px, 3vw, 38px);
-    background: linear-gradient(145deg, #9a782f, #806020);
+    background: linear-gradient(145deg, #c09a43, #94712c);
     border: 1px solid #bd984a;
     outline: 1px solid #090704;
     outline-offset: 3px;
@@ -76,7 +76,7 @@ main { padding: 42px 24px 72px; }
 
 .eyebrow {
     margin: 0 0 9px;
-    color: #493511;
+    color: #382808;
     font-size: .78rem;
     font-weight: 700;
     letter-spacing: .16em;
@@ -91,6 +91,11 @@ h2 {
 }
 
 .section-description { margin: 10px 0 0; color: var(--muted); font-weight: 700; }
+
+.contact-note { margin: 8px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
+.contact-note a { color: #382808; text-decoration: underline; text-underline-offset: 3px; }
+.contact-note a:hover { color: #211704; }
+.contact-note a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
 
 .guide-grid {
     display: grid;
@@ -151,10 +156,10 @@ h2 {
 .guide-action {
     margin-top: auto;
     padding-top: 15px;
-    color: #382808;
+    color: #fff0bb;
     font-size: .78rem;
     font-weight: 800;
-    text-shadow: 1px 1px rgba(255, 228, 156, .38);
+    text-shadow: 1px 1px #493715, 0 0 5px rgba(255, 240, 187, .35);
 }
 
 @media (max-width: 760px) {

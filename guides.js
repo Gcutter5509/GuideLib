@@ -150,11 +150,31 @@ const guides = [
 ];
 
 const guideList = document.querySelector('#guide-list');
+const classNav = document.querySelector('#class-nav');
 const iconBaseUrl = 'https://wow.zamimg.com/images/wow/icons/large/';
+const classAnchors = new Map();
 
 for (const guide of guides) {
     const link = document.createElement('a');
     link.className = 'guide-card';
+    if (!classAnchors.has(guide.className)) {
+        const anchor = `class-${classAnchors.size}`;
+        classAnchors.set(guide.className, anchor);
+        link.id = anchor;
+
+        const navLink = document.createElement('a');
+        navLink.className = 'class-nav-link';
+        navLink.href = `#${anchor}`;
+        navLink.setAttribute('aria-label', `Перейти к гайдам класса «${guide.className}»`);
+        navLink.title = guide.className;
+
+        const navIcon = document.createElement('img');
+        navIcon.src = `${iconBaseUrl}${guide.icon}.jpg`;
+        navIcon.alt = '';
+        navIcon.loading = 'lazy';
+        navLink.append(navIcon);
+        classNav.append(navLink);
+    }
     link.href = guide.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';

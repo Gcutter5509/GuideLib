@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Left page -->
+  <path d="M6 12 C6 10 8 8 10 8 L30 8 C31 8 32 9 32 10 L32 54 C32 53 31 52 30 52 L10 52 C8 52 6 50 6 48 Z" fill="#f0e6d3" stroke="#8b7355" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Right page -->
+  <path d="M58 12 C58 10 56 8 54 8 L34 8 C33 8 32 9 32 10 L32 54 C32 53 33 52 34 52 L54 52 C56 52 58 50 58 48 Z" fill="#f5edd8" stroke="#8b7355" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Spine -->
+  <line x1="32" y1="8" x2="32" y2="54" stroke="#8b7355" stroke-width="2"/>
+  <!-- Left page lines -->
+  <line x1="12" y1="18" x2="27" y2="18" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="12" y1="24" x2="25" y2="24" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="12" y1="30" x2="27" y2="30" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="12" y1="36" x2="23" y2="36" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="12" y1="42" x2="26" y2="42" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Right page lines -->
+  <line x1="37" y1="18" x2="52" y2="18" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="37" y1="24" x2="50" y2="24" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="37" y1="30" x2="52" y2="30" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="37" y1="36" x2="48" y2="36" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="37" y1="42" x2="51" y2="42" stroke="#c4a97d" stroke-width="1.5" stroke-linecap="round"/>
+</svg>

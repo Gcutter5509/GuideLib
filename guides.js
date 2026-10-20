@@ -200,6 +200,12 @@ for (const guide of guides) {
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
 
+    const roleEmojis = { 'танк': '🛡️', 'саппорт': '💚', 'рдд': '🏹', 'адд': '⚔️' };
+    const roleBadge = document.createElement('span');
+    roleBadge.className = 'guide-role-badge';
+    roleBadge.textContent = roleEmojis[guide.role] || '';
+    roleBadge.setAttribute('aria-label', guide.role);
+
     const icon = document.createElement('img');
     icon.className = 'guide-icon';
     icon.src = `${iconBaseUrl}${guide.icon}.jpg`;
@@ -227,7 +233,7 @@ for (const guide of guides) {
     textWrap.className = 'guide-card-text';
     textWrap.append(category, title, description, action);
 
-    link.append(icon, textWrap);
+    link.append(roleBadge, icon, textWrap);
     link.dataset.role = guide.role;
     guideList.append(link);
 }

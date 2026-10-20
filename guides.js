@@ -202,6 +202,10 @@ for (const guide of guides) {
     action.setAttribute('aria-hidden', 'true');
     action.textContent = 'Открыть гайд ↗';
 
-    link.append(icon, category, title, description, action);
+    const textWrap = document.createElement('div');
+    textWrap.className = 'guide-card-text';
+    textWrap.append(category, title, description, action);
+
+    link.append(icon, textWrap);
     guideList.append(link);
 }

@@ -37,6 +37,58 @@ body {
     box-shadow: 0 5px 0 rgba(139, 101, 25, .45), 0 12px 30px rgba(0, 0, 0, .65);
 }
 
+.role-filters {
+    position: sticky;
+    top: 109px;
+    z-index: 9;
+    padding: 10px 24px;
+    background: rgba(38, 28, 9, .94);
+    border-bottom: 1px solid #725314;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(6px);
+}
+
+.role-filters-content {
+    width: min(1320px, 100%);
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.role-btn {
+    flex: 0 0 auto;
+    padding: 8px 18px;
+    border: 1px solid #725314;
+    border-radius: 4px;
+    background: transparent;
+    color: #c9a24e;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .15s, border-color .15s, color .15s;
+    white-space: nowrap;
+}
+
+.role-btn:hover {
+    background: rgba(114, 83, 20, .35);
+    border-color: #f4d681;
+    color: #fff0bb;
+}
+
+.role-btn.active {
+    background: #725314;
+    border-color: #f4d681;
+    color: #fff0bb;
+    box-shadow: 0 0 8px rgba(244, 214, 129, .25);
+}
+
+.role-btn:focus-visible {
+    outline: 2px solid #f4d681;
+    outline-offset: 2px;
+}
+
 .header-content {
     width: min(1320px, 100%);
     margin: 0 auto;
@@ -87,7 +139,7 @@ main { padding: 42px 24px 72px; }
 .class-nav-link { display: block; width: 42px; height: 42px; border: 2px solid #725314; border-radius: 4px; }
 .class-nav-link:hover, .class-nav-link:focus-visible { border-color: #f4d681; outline: 2px solid #f4d681; outline-offset: 2px; }
 .class-nav-link img { display: block; width: 100%; height: 100%; border-radius: 2px; }
-.guide-card[id] { scroll-margin-top: 115px; }
+.guide-card[id] { scroll-margin-top: 160px; }
 
 .guide-section {
     width: min(1320px, 100%);
@@ -209,6 +261,8 @@ h2 {
     .site-header { padding: 18px 16px; }
     .header-content { gap: 14px; }
     .site-icon { width: 54px; height: 54px; }
+    .role-filters { top: 95px; padding: 8px 12px; }
+    .role-btn { padding: 7px 14px; font-size: .78rem; }
     main { padding: 22px 12px 42px; }
     .guide-section { padding: 22px 14px 18px; }
     .section-heading { margin-bottom: 18px; }
@@ -247,6 +301,7 @@ h2 {
     .header-content { gap: 11px; }
     .site-icon { width: 46px; height: 46px; }
     h1 { font-size: clamp(1.1rem, 5vw, 1.4rem); }
+    .role-filters { top: 87px; }
     .eyebrow { font-size: .68rem; }
     .section-description { font-size: .9rem; line-height: 1.45; }
     .guide-icon { width: 56px; height: 56px; flex-basis: 56px; }

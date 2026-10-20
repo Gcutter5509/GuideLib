@@ -4,6 +4,7 @@ const guides = [
         name: 'Фури Воин',
         className: 'Воин',
         icon: 'classicon_warrior',
+        role: 'адд',
         description: 'Ближний бой с двумя оружиями и частыми мощными атаками. Билд раскрывается в затяжных боях с боссами.',
         url: 'https://wow-sirus.com/gaydy/wotlk/voin/furi-var-335-pve-gayd-neistovstvo.html?ysclid=ml0k2j1r8c525571503',
     },
@@ -11,6 +12,7 @@ const guides = [
         name: 'ММ Охотник',
         className: 'Охотник',
         icon: 'classicon_hunter',
+        role: 'рдд',
         description: 'Дальний физический урон с упором на точные выстрелы. Подходит для стабильного нанесения урона на дистанции.',
         url: 'https://wow-sirus.com/gaydy/wotlk/ohotnik/mm-hant-3-3-5-pve-gayd-strelba.html?ysclid=ml0ka2x2qg407795558',
     },
@@ -18,6 +20,7 @@ const guides = [
         name: 'РДД Друид',
         className: 'Друид',
         icon: 'classicon_druid',
+        role: 'рдд',
         description: 'Заклинатель дальнего боя с периодическим уроном и сильными звёздными заклинаниями. Эффективен в длительных боях.',
         url: 'https://wow-sirus.com/gaydy/wotlk/druid-tank-335-gayd-pve-sila-zverya.html?ysclid=ml0kcv4vzt809280975',
     },
@@ -25,6 +28,7 @@ const guides = [
         name: 'Рестор Друид',
         className: 'Друид',
         icon: 'classicon_druid',
+        role: 'саппорт',
         description: 'Целитель, который поддерживает группу периодическим лечением. Хорошо справляется с постепенным входящим уроном.',
         url: 'https://forum.wowcircle.com/showthread.php?t=370&ysclid=ml0kunwjmu893373453',
     },
@@ -32,6 +36,7 @@ const guides = [
         name: 'Ретро Паладин',
         className: 'Паладин',
         icon: 'classicon_paladin',
+        role: 'адд',
         description: 'Ближний бой со священным уроном и мощными завершающими атаками. Универсальный урон и полезная поддержка группы.',
         url: 'https://wow-sirus.com/gaydy/wotlk/paladin/retri-pal-335-pve-gayd-vozdayanie.html?ysclid=ml0l0tpezk404035842',
     },
@@ -39,6 +44,7 @@ const guides = [
         name: 'Защитный Паладин',
         className: 'Паладин',
         icon: 'classicon_paladin',
+        role: 'танк',
         description: 'Танк с сильной защитой и набором инструментов для контроля противников. Подходит для подземелий и рейдов.',
         url: 'https://forum.wowcircle.com/showthread.php?t=304041&ysclid=ml0l1tyk7u403367607',
     },
@@ -46,6 +52,7 @@ const guides = [
         name: 'Комбат Разбойник',
         className: 'Разбойник',
         icon: 'classicon_rogue',
+        role: 'адд',
         description: 'Быстрый ближний бой с упором на непрерывные атаки. Особенно силён при стабильном контакте с целью.',
         url: 'https://wow-sirus.com/gaydy/wotlk/razboynik/kombat-roga-3-3-5-pve-gayd-boy.html?ysclid=ml0l77y23p882917521',
     },
@@ -53,6 +60,7 @@ const guides = [
         name: 'Мути Разбойник',
         className: 'Разбойник',
         icon: 'classicon_rogue',
+        role: 'адд',
         description: 'Билд с кинжалами, ядами и мощными атаками по уязвимым целям. Награждает за грамотное поддержание эффектов.',
         url: 'https://forum.wowcircle.com/showthread.php?t=126874&ysclid=ml0l883e36321033836',
     },
@@ -60,6 +68,7 @@ const guides = [
         name: 'Аркан Маг',
         className: 'Маг',
         icon: 'classicon_mage',
+        role: 'рдд',
         description: 'Взрывной магический урон с управлением запасом маны. Позволяет быстро усиливать урон в нужный момент.',
         url: 'https://wow-sirus.com/gaydy/wotlk/mag/arkan-mag-335-pve-gayd-taynaya-magiya.html?ysclid=ml0lfg8pqc671476380',
     },
@@ -67,6 +76,7 @@ const guides = [
         name: 'Фаер Маг',
         className: 'Маг',
         icon: 'classicon_mage',
+        role: 'рдд',
         description: 'Огненные заклинания с высоким уроном и частыми критическими ударами. Силен в боях с подходящими условиями.',
         url: 'https://www.allmmorpg.ru/wow/wotlk/64095-faer-mag-pve-guide-wotlk/?ysclid=ml0lgz22m133830538',
     },
@@ -74,6 +84,7 @@ const guides = [
         name: 'Фрост Маг',
         className: 'Маг',
         icon: 'classicon_mage',
+        role: 'рдд',
         description: 'Ледяные заклинания сочетают урон и контроль противников. Гайд описывает применение специализации в ПВЕ.',
         url: 'https://ezwow.org/topic/87715-gajd-frost-pve-mag-frost-pve-mage-wotlk-335/?ysclid=ml0lhnu9dr706647920',
     },
@@ -81,6 +92,7 @@ const guides = [
         name: 'Демон Чернокнижник',
         className: 'Чернокнижник',
         icon: 'classicon_warlock',
+        role: 'рдд',
         description: 'Урон тьмой и огнём при поддержке демонического спутника. Билд усиливает группу и стабильно атакует цель.',
         url: 'https://wow-sirus.com/gaydy/wotlk/demon-lok-335-pve-gayd-chernoknizhnik.html?ysclid=ml0lpx5vfh634454683',
     },
@@ -88,6 +100,7 @@ const guides = [
         name: 'Дестро Чернокнижник',
         className: 'Чернокнижник',
         icon: 'classicon_warlock',
+        role: 'рдд',
         description: 'Прямой магический урон с сильными огненными заклинаниями. Хороший выбор для активной ротации и урона по боссу.',
         url: 'https://wow-sirus.com/gaydy/wotlk/lok/destro-lok-335-pve-gayd-razrushenie.html?ysclid=ml0m1pcms3520457210',
     },
@@ -95,6 +108,7 @@ const guides = [
         name: 'ШП Жрец',
         className: 'Жрец',
         icon: 'classicon_priest',
+        role: 'рдд',
         description: 'Тёмная магия и периодический урон с дополнительной поддержкой группы. Поддерживает стабильное давление на цели.',
         url: 'https://wow-sirus.com/gaydy/wotlk/prist/shp-prist-335-pve-gayd-tma.html?ysclid=ml0m9abvk9594794101',
     },
@@ -102,6 +116,7 @@ const guides = [
         name: 'ДЦ Жрец',
         className: 'Жрец',
         icon: 'classicon_priest',
+        role: 'саппорт',
         description: 'Защитное лечение через щиты и предотвращение урона. Помогает группе переживать опасные механики.',
         url: 'https://wow-sirus.com/gaydy/wotlk/dc-prist-335-gayd-pve-poslushanie.html?ysclid=ml0m9h1vo7883638528',
     },
@@ -109,6 +124,7 @@ const guides = [
         name: 'ХП Жрец',
         className: 'Жрец',
         icon: 'classicon_priest',
+        role: 'саппорт',
         description: 'Гибкий целитель с быстрым лечением отдельных игроков и восстановлением здоровья группы. Подходит для разных ситуаций.',
         url: 'https://forum.wowcircle.com/showthread.php?t=350169&ysclid=ml0mbdg2up89830357',
     },
@@ -116,6 +132,7 @@ const guides = [
         name: 'Анхоли ДК',
         className: 'Рыцарь смерти',
         icon: 'spell_deathknight_classicon',
+        role: 'адд',
         description: 'Болезни, прислужник и периодический урон создают сильное давление на цель. Билд раскрывается в продолжительном бою.',
         url: 'https://forum.wowcircle.com/showthread.php?t=655891&ysclid=ml0mcldw85132819833',
     },
@@ -123,6 +140,7 @@ const guides = [
         name: 'Блад ДК',
         className: 'Рыцарь смерти',
         icon: 'spell_deathknight_classicon',
+        role: 'танк',
         description: 'Танкование через рунические способности и мощное самоисцеление. Помогает выдерживать большой входящий урон.',
         url: 'https://wow-sirus.com/gaydy/wotlk/dk/blad-dk-335-pve-gayd-krov.html?ysclid=ml0mh2iy6i254828285',
     },
@@ -130,6 +148,7 @@ const guides = [
         name: 'Фрост ДК',
         className: 'Рыцарь смерти',
         icon: 'spell_deathknight_classicon',
+        role: 'адд',
         description: 'Ледяной ближний бой с мощными ударами и сильным уроном по нескольким противникам. Использует одну или две руки.',
         url: 'https://forum.wowcircle.com/showthread.php?t=307438&ysclid=ml0miq6jad598312678',
     },
@@ -137,6 +156,7 @@ const guides = [
         name: 'Элем Шаман',
         className: 'Шаман',
         icon: 'classicon_shaman',
+        role: 'рдд',
         description: 'Дальние атаки молнией и огнём с поддержкой тотемов. Сочетает урон с полезными групповыми усилениями.',
         url: 'https://wow-sirus.com/gaydy/wotlk/shaman/yelem-shaman-335-pve-gayd-stihii.html?ysclid=ml0mnbihl5639279282',
     },
@@ -144,6 +164,7 @@ const guides = [
         name: 'Энх Шаман',
         className: 'Шаман',
         icon: 'classicon_shaman',
+        role: 'адд',
         description: 'Ближний бой с оружием, магическими эффектами и тотемами. Наносит смешанный урон и усиливает союзников.',
         url: 'https://forum.wowcircle.com/showthread.php?t=419089&ysclid=ml0mnl0qbc375747354',
     },
@@ -207,5 +228,29 @@ for (const guide of guides) {
     textWrap.append(category, title, description, action);
 
     link.append(icon, textWrap);
+    link.dataset.role = guide.role;
     guideList.append(link);
 }
+
+// --- Фильтрация по роли ---
+const roleFilters = document.querySelector('#role-filters');
+const roleButtons = roleFilters.querySelectorAll('.role-btn');
+let activeRole = 'all';
+
+roleFilters.addEventListener('click', (e) => {
+    const btn = e.target.closest('.role-btn');
+    if (!btn) return;
+
+    const role = btn.dataset.role;
+    if (role === activeRole) return;
+
+    activeRole = role;
+    for (const b of roleButtons) {
+        b.classList.toggle('active', b === btn);
+    }
+
+    const cards = guideList.querySelectorAll('.guide-card');
+    for (const card of cards) {
+        card.style.display = (role === 'all' || card.dataset.role === role) ? '' : 'none';
+    }
+});

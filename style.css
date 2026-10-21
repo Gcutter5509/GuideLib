@@ -1,11 +1,3 @@
-@font-face {
-    font-family: 'Azeroth Cyrillic';
-    src: local('Azeroth Cyrillic'), local('AzerothCyrillic'), url('azerothcyrillic.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-}
-
 :root {
     color-scheme: dark;
     --gold: #775711;
@@ -13,7 +5,7 @@
     --ink: #2b210d;
     --muted: #382808;
     --font-title: 'Morpheus', 'MedievalSharp', Georgia, serif;
-    --font-body: 'Azeroth Cyrillic', 'Friz Quadrata TT', 'Cinzel', Georgia, serif;
+    --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     --font-ui: 'Arial Narrow', 'Skurri', Arial, sans-serif;
 }
 
@@ -28,7 +20,7 @@ body {
     margin: 0;
     color: var(--ink);
     font-family: var(--font-body);
-    font-weight: 600;
+    font-weight: 500;
     background-color: #090805;
     background-image:
         radial-gradient(ellipse at 50% 0%, rgba(116, 82, 18, .24), transparent 52%),
@@ -184,9 +176,9 @@ h2 {
     text-shadow: 1px 1px rgba(237, 204, 133, .35);
 }
 
-.section-description { margin: 10px 0 0; color: var(--muted); font-weight: 700; }
+.section-description { margin: 10px 0 0; color: var(--muted); font-size: 1rem; font-weight: 600; line-height: 1.5; }
 
-.contact-note { margin: 8px 0 0; color: var(--muted); font-size: .9rem; font-weight: 700; }
+.contact-note { margin: 8px 0 0; color: var(--muted); font-size: .92rem; font-weight: 600; }
 .contact-note a { color: #fff0bb; text-decoration: underline; text-underline-offset: 3px; text-shadow: 0 1px #493715; }
 .contact-note a:hover { color: #fff8da; }
 .contact-note a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 3px; }
@@ -247,7 +239,7 @@ h2 {
     font: 800 1.08rem/1.3 var(--font-title);
 }
 
-.guide-description { margin-top: 10px; color: #3d3017; font-size: .87rem; font-weight: 600; line-height: 1.5; }
+.guide-description { margin-top: 10px; color: #3d3017; font-size: .88rem; font-weight: 500; line-height: 1.5; }
 
 .guide-action {
     margin-top: auto;
@@ -328,7 +320,7 @@ h2 {
     }
 
     .guide-name { margin-top: 3px; font-size: 1rem; }
-    .guide-description { margin-top: 6px; font-size: .82rem; }
+    .guide-description { margin-top: 6px; font-size: .84rem; }
     .guide-action { margin-top: 8px; padding-top: 0; }
 }
 
@@ -338,14 +330,14 @@ h2 {
     h1 { font-size: clamp(1.1rem, 5vw, 1.4rem); }
     .role-filters { top: 87px; }
     .eyebrow { font-size: .68rem; }
-    .section-description { font-size: .9rem; line-height: 1.45; }
+    .section-description { font-size: .92rem; line-height: 1.45; }
     .guide-icon { width: 56px; height: 56px; }
 }
 
 @media (max-width: 390px) {
     .guide-icon { width: 48px; height: 48px; }
     .guide-name { font-size: .95rem; }
-    .guide-description { font-size: .8rem; }
+    .guide-description { font-size: .82rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

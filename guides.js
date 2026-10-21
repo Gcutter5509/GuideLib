@@ -200,11 +200,15 @@ for (const guide of guides) {
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
 
-    const roleEmojis = { 'Танк': '🛡️', 'Саппорт': '💚', 'РДД': '🏹', 'АДД': '⚔️' };
+    const roleEmojis = { 'Саппорт': '💚', 'РДД': '🏹', 'АДД': '⚔️' };
     const roleBadge = document.createElement('span');
     roleBadge.className = 'guide-role-badge';
-    roleBadge.textContent = roleEmojis[guide.role] || '';
     roleBadge.setAttribute('aria-label', guide.role);
+    if (guide.role === 'Танк') {
+        roleBadge.innerHTML = '<svg class="role-icon-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L4 5v6.5C4 16.5 7.5 21 12 22c4.5-1 8-5.5 8-10.5V5l-8-3z" fill="#22303c" stroke="#121b22" stroke-width="1" stroke-linejoin="round"/><path d="M12 3.6L5.5 6v5.5c0 3.8 2.7 7.2 6.5 8.1 3.8-.9 6.5-4.3 6.5-8.2V6L12 3.6z" fill="#8fa1b3"/><path d="M12 3.6v13.6c3.8-.9 6.5-4.3 6.5-8.2V6L12 3.6z" fill="#677b8f"/><path d="M12 5.4L7 7.3v4.2c0 2.9 2.1 5.6 5 6.4 2.9-.8 5-3.5 5-6.4V7.3L12 5.4z" fill="#e2edf7"/><path d="M12 5.4v10.6c2.9-.8 5-3.5 5-6.4V7.3L12 5.4z" fill="#b8c8d8"/></svg>';
+    } else {
+        roleBadge.textContent = roleEmojis[guide.role] || '';
+    }
 
     const icon = document.createElement('img');
     icon.className = 'guide-icon';

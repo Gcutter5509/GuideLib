@@ -42,7 +42,7 @@ body {
 
 .role-filters {
     position: sticky;
-    top: 109px;
+    top: var(--header-height, 109px);
     z-index: 9;
     padding: 10px 24px;
     background: rgba(38, 28, 9, .94);
@@ -115,7 +115,83 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+}
+
+.header-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: linear-gradient(180deg, #5c4416 0%, #2f2108 100%);
+    border: 1px solid #c9a24e;
+    border-radius: 4px;
+    color: #fff0bb;
+    font-family: var(--font-ui);
+    font-size: .88rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .4), inset 0 1px 0 rgba(255, 240, 187, .25);
+    transition: background .2s ease, border-color .2s ease, transform .15s ease, box-shadow .2s ease, color .2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.header-nav-btn:hover {
+    background: linear-gradient(180deg, #785a20 0%, #44310d 100%);
+    border-color: #f4d681;
+    color: #ffffff;
+    box-shadow: 0 0 14px rgba(244, 214, 129, .4), 0 3px 8px rgba(0, 0, 0, .5);
+    transform: translateY(-1px);
+}
+
+.header-nav-btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+}
+
+.header-nav-btn:focus-visible {
+    outline: 2px solid #f4d681;
+    outline-offset: 3px;
+}
+
+.btn-arrow {
+    display: inline-block;
+    font-size: 1.15em;
+    line-height: 1;
+    transition: transform .15s ease;
+}
+
+.header-nav-btn:hover .btn-arrow {
+    transform: translateX(3px);
+}
+
+.header-nav-btn.btn-back:hover .btn-arrow {
+    transform: translateX(-3px);
+}
+
+.empty-role-notice {
+    padding: 36px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-style: italic;
+    background: rgba(43, 33, 13, 0.15);
+    border: 1px dashed #725314;
+    border-radius: 4px;
+    margin-top: 10px;
 }
 
 .site-icon {
@@ -292,10 +368,12 @@ h2 {
 }
 
 @media (max-width: 600px) {
-    .site-header { padding: 18px 16px; }
+    .site-header { padding: 14px 16px; }
     .header-content { gap: 14px; }
-    .site-icon { width: 54px; height: 54px; }
-    .role-filters { top: 95px; padding: 8px 12px; }
+    .header-brand { gap: 14px; }
+    .site-icon { width: 52px; height: 52px; }
+    .header-nav-btn { padding: 8px 14px; font-size: .8rem; }
+    .role-filters { top: var(--header-height, 95px); padding: 8px 12px; }
     .role-btn { padding: 7px 14px; font-size: .78rem; }
     main { padding: 22px 12px 42px; }
     .guide-section { padding: 22px 14px 18px; }
@@ -342,10 +420,12 @@ h2 {
 }
 
 @media (max-width: 480px) {
-    .header-content { gap: 11px; }
+    .header-content { flex-direction: column; align-items: stretch; gap: 12px; }
+    .header-brand { gap: 11px; }
     .site-icon { width: 46px; height: 46px; }
     h1 { font-size: clamp(1.1rem, 5vw, 1.4rem); }
-    .role-filters { top: 87px; }
+    .header-nav-btn { justify-content: center; width: 100%; }
+    .role-filters { top: var(--header-height, 87px); }
     .eyebrow { font-size: .68rem; }
     .section-description { font-size: .92rem; line-height: 1.45; }
     .guide-icon { width: 56px; height: 56px; }

@@ -264,3 +264,14 @@ roleFilters.addEventListener('click', (e) => {
         card.style.display = (role === 'all' || card.dataset.role === role) ? '' : 'none';
     }
 });
+
+// Автоматическая подстройка положения панели фильтров под высоту шапки
+function updateHeaderOffset() {
+    const header = document.querySelector('.site-header');
+    if (header) {
+        document.documentElement.style.setProperty('--header-height', `${header.offsetHeight}px`);
+    }
+}
+window.addEventListener('resize', updateHeaderOffset);
+window.addEventListener('load', updateHeaderOffset);
+updateHeaderOffset();

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101923">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <title>Сборник гайдов для WoW 7.3.5 Legion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&family=MedievalSharp&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="guides-legion.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="header-brand">
+                <img
+                    class="site-icon"
+                    src="https://img.icons8.com/win10/1200/world-of-warcraft.jpg"
+                    alt="Эмблема World of Warcraft"
+                >
+                <h1>Сборник гайдов для WoW 7.3.5 Legion</h1>
+            </div>
+            <a href="index.html" class="header-nav-btn btn-back" aria-label="Вернуться к гайдам для WoW 3.3.5a WotLK">
+                <span class="btn-arrow" aria-hidden="true">←</span>
+                <span class="btn-text">WoW 3.3.5a WotLK</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="role-filters" id="role-filters" aria-label="Фильтр по роли">
+        <div class="role-filters-content">
+            <button class="role-btn active" data-role="all">Все</button>
+            <button class="role-btn" data-role="Танк"><svg class="role-icon-shield" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2L4 5v6.5C4 16.5 7.5 21 12 22c4.5-1 8-5.5 8-10.5V5l-8-3z" fill="#22303c" stroke="#121b22" stroke-width="1" stroke-linejoin="round"/><path d="M12 3.6L5.5 6v5.5c0 3.8 2.7 7.2 6.5 8.1 3.8-.9 6.5-4.3 6.5-8.2V6L12 3.6z" fill="#8fa1b3"/><path d="M12 3.6v13.6c3.8-.9 6.5-4.3 6.5-8.2V6L12 3.6z" fill="#677b8f"/><path d="M12 5.4L7 7.3v4.2c0 2.9 2.1 5.6 5 6.4 2.9-.8 5-3.5 5-6.4V7.3L12 5.4z" fill="#e2edf7"/><path d="M12 5.4v10.6c2.9-.8 5-3.5 5-6.4V7.3L12 5.4z" fill="#b8c8d8"/></svg> Танк</button>
+            <button class="role-btn" data-role="Саппорт">💚 Саппорт</button>
+            <button class="role-btn" data-role="РДД">🏹 РДД</button>
+            <button class="role-btn" data-role="АДД">⚔️ АДД</button>
+        </div>
+    </div>
+
+    <nav class="class-nav" id="class-nav" aria-label="Переход к гайдам по классам"></nav>
+
+    <main>
+        <section class="guide-section" aria-labelledby="guides-title">
+            <div class="section-heading">
+                <p class="eyebrow">ПВЕ · Legion 7.3.5</p>
+                <h2 id="guides-title">Билды для классов</h2>
+                <p class="section-description">Выберите специализацию, чтобы открыть подробный гайд по популярному билду класса.</p>
+                <p class="contact-note">Сообщить о багах и своих пожеланиях можно мне в Telegram: <a href="https://t.me/g_cutter" target="_blank" rel="noopener noreferrer">@g_cutter</a></p>
+            </div>
+            <div class="guide-grid" id="guide-list" aria-label="Список гайдов"></div>
+        </section>
+    </main>
+</body>
+</html>

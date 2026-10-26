@@ -6,8 +6,23 @@ const guides = [
         icon: 'classicon_monk',
         role: 'Танк',
         description: 'Мастер хмелеварения, управляющий входящим уроном с помощью пошатывания и крепких настоев. Мобильный и надежный танк для подземелий и рейдов.',
-
         url: 'https://www.allmmorpg.ru/wow/24203-monax-xmelevar-pve-gajd-legion/',
+    },
+    {
+        name: 'Ткач туманов Монах',
+        className: 'Монах',
+        icon: 'classicon_monk',
+        role: 'Саппорт',
+        description: 'Целитель, сочетающий целительные туманы и энергию Ци для эффективного восстановления здоровья группы и одиночных целей.',
+        url: 'https://www.allmmorpg.ru/wow/24241-monax-tkach-tumanov-xil-pve-guide/',
+    },
+    {
+        name: 'Танцующий с ветром Монах',
+        className: 'Монах',
+        icon: 'classicon_monk',
+        role: 'АДД',
+        description: 'Мастер рукопашного боя с высокой подвижностью и комбинациями ударов. Наносит отличный урон как по одной цели, так и по группам врагов.',
+        url: 'https://www.allmmorpg.ru/wow/23937-monax-tancuyushhij-s-vetrom-pve-gajd-legion/',
     },
 ];
 

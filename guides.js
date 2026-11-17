@@ -173,11 +173,28 @@ const guides = [
 const guideList = document.querySelector('#guide-list');
 const classNav = document.querySelector('#class-nav');
 const iconBaseUrl = 'https://wow.zamimg.com/images/wow/icons/large/';
+// Официальные цвета классов WoW — используются для акцентов карточек.
+const classColors = {
+    classicon_warrior: '#C79C6E',
+    classicon_paladin: '#F58CBA',
+    classicon_hunter: '#ABD473',
+    classicon_rogue: '#FFF569',
+    classicon_priest: '#FFFFFF',
+    spell_deathknight_classicon: '#E0364F',
+    classicon_shaman: '#3D8BFF',
+    classicon_mage: '#69CCF0',
+    classicon_warlock: '#A99BE6',
+    classicon_monk: '#00FF96',
+    classicon_druid: '#FF7D0A',
+    classicon_demonhunter: '#C656F0',
+};
 const classAnchors = new Map();
 
 for (const guide of guides) {
     const link = document.createElement('a');
     link.className = 'guide-card';
+    const classColor = classColors[guide.icon];
+    if (classColor) link.style.setProperty('--class-color', classColor);
     if (!classAnchors.has(guide.className)) {
         const anchor = `class-${classAnchors.size}`;
         classAnchors.set(guide.className, anchor);
@@ -185,6 +202,7 @@ for (const guide of guides) {
 
         const navLink = document.createElement('a');
         navLink.className = 'class-nav-link';
+        if (classColor) navLink.style.setProperty('--class-color', classColor);
         navLink.href = `#${anchor}`;
         navLink.setAttribute('aria-label', `Перейти к гайдам класса «${guide.className}»`);
         navLink.title = guide.className;

@@ -173,20 +173,20 @@ const guides = [
 const guideList = document.querySelector('#guide-list');
 const classNav = document.querySelector('#class-nav');
 const iconBaseUrl = 'https://wow.zamimg.com/images/wow/icons/large/';
-// Официальные цвета классов WoW — используются для акцентов карточек.
+// Цвета классов WoW в спокойных, аутентичных тонах без неона для светлой темы
 const classColors = {
-    classicon_warrior: '#C79C6E',
-    classicon_paladin: '#F58CBA',
-    classicon_hunter: '#ABD473',
-    classicon_rogue: '#FFF569',
-    classicon_priest: '#FFFFFF',
-    spell_deathknight_classicon: '#E0364F',
-    classicon_shaman: '#3D8BFF',
-    classicon_mage: '#69CCF0',
-    classicon_warlock: '#A99BE6',
-    classicon_monk: '#00FF96',
-    classicon_druid: '#FF7D0A',
-    classicon_demonhunter: '#C656F0',
+    classicon_warrior: '#8c6239',
+    classicon_paladin: '#a63a6a',
+    classicon_hunter: '#4a7318',
+    classicon_rogue: '#8a7312',
+    classicon_priest: '#4a5b6d',
+    spell_deathknight_classicon: '#a81e32',
+    classicon_shaman: '#155da1',
+    classicon_mage: '#1a759c',
+    classicon_warlock: '#5c488a',
+    classicon_monk: '#0b7a48',
+    classicon_druid: '#b85400',
+    classicon_demonhunter: '#7c259c',
 };
 const classAnchors = new Map();
 
@@ -293,3 +293,22 @@ function updateHeaderOffset() {
 window.addEventListener('resize', updateHeaderOffset);
 window.addEventListener('load', updateHeaderOffset);
 updateHeaderOffset();
+
+// --- Переключение версии игры через выпадающий список ---
+const versionSelect = document.querySelector('#version-select');
+if (versionSelect) {
+    versionSelect.addEventListener('change', (e) => {
+        if (e.target.value) {
+            window.location.href = e.target.value;
+        }
+    });
+}
+
+// Восстановление корректного значения при возврате по истории (BFCache)
+window.addEventListener('pageshow', () => {
+    if (versionSelect) {
+        const path = window.location.pathname;
+        const isLegion = path.endsWith('legion.html');
+        versionSelect.value = isLegion ? 'legion.html' : 'index.html';
+    }
+});

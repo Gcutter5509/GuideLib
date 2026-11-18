@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0c11">
+    <meta name="theme-color" content="#f5f2ea">
     <link rel="icon" type="image/svg+xml" href="icon.svg">
     <title>Сборник гайдов для WoW 7.3.5 Legion</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +21,19 @@
                     src="https://img.icons8.com/win10/1200/world-of-warcraft.jpg"
                     alt="Эмблема World of Warcraft"
                 >
-                <h1>Сборник гайдов для WoW 7.3.5 Legion</h1>
+                <h1 class="site-title">
+                    <span class="site-title-text">Сборник гайдов для WoW</span>
+                    <span class="version-select-wrap">
+                        <select id="version-select" class="version-select" aria-label="Выберите версию WoW" onchange="if(this.value) window.location.href=this.value;">
+                            <option value="index.html">3.3.5a WotLK</option>
+                            <option value="legion.html" selected>7.3.5 Legion</option>
+                        </select>
+                        <svg class="version-select-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </span>
+                </h1>
             </div>
-            <a href="index.html" class="header-nav-btn btn-back" aria-label="Вернуться к гайдам для WoW 3.3.5a WotLK">
-                <span class="btn-arrow" aria-hidden="true">←</span>
-                <span class="btn-text">WoW 3.3.5a WotLK</span>
-            </a>
         </div>
     </header>
 
